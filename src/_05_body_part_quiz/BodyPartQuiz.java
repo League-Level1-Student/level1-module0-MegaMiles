@@ -50,27 +50,51 @@ public class BodyPartQuiz {
 
 	private void startQuiz() {
 
-		// 1. Make an int variable to hold the score.
+		// 1. Make an integer variable to hold the score.
 int Score = 0;
 		// 2. Set the size of the window in the initializeGui() method 
 
 		// 4. Ask the user who this person is and store their answer
-		String guess = JOptionPane.showInputDialog("who is this?");
+		String gues = JOptionPane.showInputDialog("who is this?");
 
 		// 5. Check their answer. If they guessed correctly:
 		// -- Tell them they are right and increase the score by 1
-                                                                                                                                                       
-		
+                if (gues.equalsIgnoreCase("arnold")) {	
+				}                                                                                                                                       
 		// 6. Otherwise:
 		// -- Tell them they are wrong and who the person is
-
+                else {
+				JOptionPane.showMessageDialog(null, "You are wrong it is Arnold");	
+				}
 		// 7. Use the showNextImage() method below to get the next image
 		showNextImage();
 
 		// 8. .... repeat 4-7 for all your images.....
-
+		String guess = JOptionPane.showInputDialog("who is this?");
+		if (guess.equalsIgnoreCase("Lenardo")) {
+		Score ++ ;
+		}
+		else {
+		JOptionPane.showMessageDialog(null, "You are wrong it is Lenardo");	
+		}
+		showNextImage();
+		String guesss = JOptionPane.showInputDialog("who is this?");
+		if (guesss.equalsIgnoreCase("Morgan")) {
+		Score ++ ;
+		}
+		else {
+		JOptionPane.showMessageDialog(null, "You are wrong it is Morgan");	
+		}
+		showNextImage();
+		String guessss = JOptionPane.showInputDialog("who is this?");
+		if (guessss.equalsIgnoreCase("Jack")) {
+		Score ++ ;
+		}
+		else {
+		JOptionPane.showMessageDialog(null, "You are wrong it is Jack");	
+		}
 		// 9. Show them their current score
-
+JOptionPane.showMessageDialog(null, "Your current score is " + Score + "! Great Job");
 	}
 
 	public void showNextImage() {
