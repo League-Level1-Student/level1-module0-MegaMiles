@@ -1,12 +1,17 @@
 package _10_cuteness_tv;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.net.URI;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-public class TV {
+public class TV implements ActionListener {
+	static JButton yoyo = new JButton();
+	static JButton yeeet = new JButton();
+	static JButton bruh = new JButton();
 public static void main(String[] args) {
 
 	
@@ -14,9 +19,9 @@ public static void main(String[] args) {
 	JFrame frame = new JFrame();
 	frame.setVisible(true);
 	
-JButton yoyo = new JButton();	
-JButton yeeet = new JButton();	
-JButton bruh = new JButton();	
+	TV yay = new TV();
+	
+	yay.addactionlistener();
 	
 frame.add(panel);
 panel.add(yoyo);
@@ -29,19 +34,6 @@ yeeet.setText("Duck");
 frame.add(panel);
 panel.add(bruh);
 bruh.setText("Unicorns");
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	
@@ -81,7 +73,7 @@ bruh.setText("Unicorns");
 	     }      } catch (Exception e) {
 	          e.printStackTrace();
 	     }
-	}
+	} 
 	
 	
 	
@@ -94,156 +86,27 @@ bruh.setText("Unicorns");
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
+	void addactionlistener() {
+		yoyo.addActionListener(this);
+		yeeet.addActionListener(this);
+		bruh.addActionListener(this);
 }
+
+
+
+
+
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+	if (e.getSource() == yoyo) {
+		showFrog();}
+		if (e.getSource() == yeeet) {
+			showDucks();}
+			if (e.getSource() == bruh) {
+				showFluffyUnicorns();}
+	}	
+	}	
+	
+		
+
