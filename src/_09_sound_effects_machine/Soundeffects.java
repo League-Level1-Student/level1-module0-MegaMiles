@@ -17,13 +17,16 @@ public class Soundeffects implements ActionListener {
 	public static void main(String[] args) {
 		Soundeffects hi = new Soundeffects();
 		hi.HIIII();
-	}
+	 {
+		
+	}}
 
 	public void YOYo() {
 		for (int i = 0; i < 1000000000; i++) {
 			playSound("pizza.wav");
 		}	
 	}
+	
 	
 	public void HIIII() {
 		JPanel panel = new JPanel();
